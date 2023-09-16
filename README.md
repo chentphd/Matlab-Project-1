@@ -1,6 +1,7 @@
 # AMS595_Project1
 Brief Documentation – AMS 595 Project 1
 GitHub Repository: https://github.com/TonyChenSBU/AMS595_Project1
+
 Q1. Base Converter
 `BaseConverter.m`
 Description: This script prompts the user for three inputs: an integer `n` (where 2 ≤ n ≤ 10), a number in base-n, and an integer `m` (where 2 ≤ m ≤ 10). It then converts the user's number from base-n to base-m and prints the result.
