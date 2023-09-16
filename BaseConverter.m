@@ -10,14 +10,17 @@ function BaseConverter
     
     % Check if inputs are valid
     if ~(2 <= n && n <= 10) || ~(2 <= m && m <= 10)
-        disp('Error: n and m must be integers between 2 and 10.');
-        return;
+        error('Error: n and m must be integers between 2 and 10.');
     end
 
+
     % Check if the input number is valid in base-n
-    if ~isValidBaseNumber(number, n)
-        disp(['Error: The input number is not valid in base-' num2str(n) '.']);
-        return;
+    valid_chars = '0':'9';
+    valid_chars = valid_chars(1:n);
+    valid = all(ismember(number, valid_chars));
+
+    if ~valid
+        error(['Error: The input number is not valid in base-' num2str(n) '.']);
     end
 
     % Convert the number from base-n to base-10
@@ -28,19 +31,10 @@ function BaseConverter
 
     % Display the result
     % Use fprintf() 
-    % fprintf( 'First 3 digits of x is: %.4f \n',x) 
-    
+    % fprintf( 'First 3 digits of x is: %.4f \n',x) lecture 4
     disp(['Your number in base ' num2str(m) ' is: ' baseM_number]);
 end
 
-function valid = isValidBaseNumber(number, base)
-%ISVALIDBASENUMBER Check if the input number is valid in base-n
-%INPUT: Number in base m, base m 
-%OUTPUT: Boolean to see if the number is base m
-    valid_chars = ['0':'9' 'A':'Z'];
-    valid_chars = valid_chars(1:base);
-    valid = all(ismember(number, valid_chars));
-end
 
 function base10_number = baseNToBase10(number, base)
     % Convert the input number from base-n to base-10
