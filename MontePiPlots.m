@@ -25,13 +25,13 @@ ylabel('Execution Time (seconds)');
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% (b) Part 2: Compute approximations and plot absolute errors
+% (b) Part 2: Compute approximations of  for various values of n and plot absolute errors
 %n_values = 1:1000;
 abs_errors = zeros(size(n_values));
 
 for i = 1:length(n_values)
     n = n_values(i);
-    [~, absError, ~] = MontePi(n);
+    [~, absError, ~] = MontePi(n); 
     abs_errors(i) = absError;
 end
 
@@ -92,8 +92,9 @@ end
 hold on;
 
 
-%scatter(x(inCircle), y(inCircle), 'b');
-
+%Checking my work with scatter all points at once 
+%scatter(x(inCircle), y(inCircle), 'magenta');
+%scatter(x(outsideCircle), y(outsideCircle), 'yellow')
 
 title(['Random Points for n = ' num2str(n)]);
 xlabel('x');
