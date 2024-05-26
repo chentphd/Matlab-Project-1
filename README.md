@@ -1,5 +1,5 @@
-# AMS595_Project1
-Brief Documentation – AMS 595 Project 1
+# Matlab_Project1
+Brief Documentation – Matlab Project 1
 GitHub Repository: https://github.com/TonyChenSBU/AMS595_Project1
 
 Q1. Base Converter
